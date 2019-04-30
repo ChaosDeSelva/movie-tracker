@@ -1,0 +1,13 @@
+{{#paper-card as |card|}}
+ {{#card.title as |title|}}
+   {{#title.text as |text|}}
+     {{#text.headline}}{{itemTitle}}{{/text.headline}}
+     {{#text.subhead}}{{itemDescription}}{{/text.subhead}}
+   {{/title.text}}
+   {{title.media size="sm" src=itemImageUrl alt=itemTitle title=itemTitle}}
+ {{/card.title}}
+ {{#card.actions}}
+   {{#paper-button onClick=(action "viewItem" itemId)}}View{{/paper-button}}
+   {{#paper-button onClick=(action "removeItem" itemId)}}Remove{{/paper-button}}
+ {{/card.actions}}
+{{/paper-card}}

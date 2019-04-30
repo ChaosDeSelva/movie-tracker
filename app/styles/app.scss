@@ -1,0 +1,18 @@
+@import 'ember-paper';
+
+.container {
+  padding: 50px;
+}
+
+.search-input {
+  padding-bottom: 20px;
+}
+
+button {
+  width: 100%;
+}
+
+md-card md-card-title md-card-title-media .md-media-sm {
+  height: 220px !important;
+  width: 150px !important;
+}

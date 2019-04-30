@@ -1,0 +1,14 @@
+{{#paper-toolbar}}
+  {{#paper-toolbar-tools}}
+    {{#paper-button iconButton=true onClick=(action "goHome")}}
+      {{paper-icon "menu"}}
+    {{/paper-button}}
+    <h2>
+      Search Movies
+    </h2>
+    <span class="flex"></span>
+    {{#paper-button iconButton=true onClick=(action "goAbout")}}
+      {{paper-icon "favorite"}}
+    {{/paper-button}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}

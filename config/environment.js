@@ -1,5 +1,7 @@
 'use strict';
 
+const API_CONFIG = require('./api-values');
+
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'movie-track',
@@ -22,6 +24,11 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  ENV.omdbapi = {
+    apikey: API_CONFIG.apikey,
+    apiurl: API_CONFIG.apiurl
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

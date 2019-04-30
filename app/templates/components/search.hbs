@@ -1,0 +1,10 @@
+<div class="layout-row layout-xs-column">
+  <div class="flex">
+    {{paper-input autofocus=true class="md-block" label=searchPlaceholder
+    type="text" value=searchValue onChange=(action (mut searchValue)) autocomplete=false
+    customValidations=multipleConstraints onKeyDown=(action "keyDownReceived")}}
+  </div>
+  <div class="flex-10">
+    {{#paper-button primary=true raised=true onClick=(action "submitSearch" searchValue)}}Submit Search{{/paper-button}}
+  </div>
+</div>

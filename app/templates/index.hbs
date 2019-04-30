@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="search-input">
+    <Search @onSubmit={{action "handleSearchSubmit"}} @searchPlaceholder="Search for a movie by title..."/>
+  </div>
+  <div class="layout-row layout-xs-column">
+    {{#if activeMovie}}
+      <div class="flex-25">
+        {{#each model as |item|}}
+          <CardList @itemTitle={{item.Title}} @itemImageUrl={{item.Poster}}
+                    @itemDescription={{item.Plot}}  @itemId={{item.imdbID}}
+                    @onView={{action "handleViewItem"}}
+                    @onRemove={{action "handleRemoveItem"}} />
+          {{/each}}
+      </div>
+      <div class="flex">
+        <MovieDetails @activeMovie={{activeMovie}} />
+      </div>
+    {{else}}
+      <h1>Search for a movie...</h1>
+    {{/if}}
+  </div>
+</div>
+
+<!-- TODO Maybe put in a component if reused -->
+{{#if showToastError}}
+  {{#paper-toast duration=3000 position=(concat positionY " " positionX) onClose=(action "closeToast") as |toast|}}
+    {{#toast.text}}{{toastErrorMessage}}{{/toast.text}}
+  {{/paper-toast}}
+{{/if}}

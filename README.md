@@ -18,6 +18,14 @@ You will need the following things properly installed on your computer.
 * `cd movie-track`
 * `npm install`
 
+Create the file api-values.js in the config directory and provide the following values.
+
+* module.exports = {
+*   apikey: 'YOUR_KEY',
+*   apurl: 'http://www.omdbapi.com/'
+* }
+
+
 ## Running / Development
 
 * `ember serve`
