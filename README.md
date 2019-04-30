@@ -22,7 +22,7 @@ Create the file api-values.js in the config directory and provide the following 
 
 * module.exports = {
 *   apikey: 'YOUR_KEY',
-*   apurl: 'http://www.omdbapi.com/'
+*   apiurl: 'http://www.omdbapi.com/'
 * }
 
 
